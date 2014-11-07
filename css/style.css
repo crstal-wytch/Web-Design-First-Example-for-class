@@ -1,0 +1,31 @@
+/* Full CSS code for all pages */
+
+body
+{
+	background:#000000;
+}
+#wrapper
+{
+	background:#ffffff;
+	width:80%;
+	margin:0 auto;
+}
+#menu ul li
+{
+	float:left;
+	margin:5px 25px;
+	padding:15px 20px;
+	font-size:24px;
+	list-style-type:none;
+}
+#menu ul li a
+{
+	color:green;
+	text-decoration:none;
+}
+#main
+{
+	clear:both;
+	text-align:center;
+	padding:30px 0;
+}
