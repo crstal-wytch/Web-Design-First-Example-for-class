@@ -20,8 +20,13 @@ body
 }
 #menu ul li a
 {
-	color:green;
+	color:#006600;
 	text-decoration:none;
+}
+#menu ul li a:hover
+{
+	color:#0000FF;	
+}
 }
 #content
 {
