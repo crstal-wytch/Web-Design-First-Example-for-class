@@ -4,6 +4,7 @@ body
 {
 	background:#000000;
 }
+/* Styling for ID's */
 #wrapper
 {
 	background:#ffffff;
@@ -22,9 +23,25 @@ body
 	color:green;
 	text-decoration:none;
 }
-#main
+#content
 {
 	clear:both;
 	text-align:center;
-	padding:30px 0;
+	padding:4% 0 18% 0;
+}
+#main
+{
+	width:65%;
+}
+#menu-right
+{
+	width:30%;
+	padding-bottom:7%;
+	background-color:#D7FADB;
+	border-radius:15%;
+}
+/* Styling for Classes */
+.left
+{
+	float:left;
 }
