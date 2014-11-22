@@ -1,16 +1,308 @@
-/* Full CSS code for all pages */
+/* Reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section 
+{
+	display: block;
+}
+body 
+{
+	line-height: 1;
+}
+ol, ul 
+{
+	list-style: none;
+}
+blockquote, q 
+{
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after 
+{
+	content: '';
+	content: none;
+}
 
+/* remember to define visible focus styles! 
+:focus {
+	outline: ?????;
+} */
+
+/* remember to highlight inserts somehow! */
+ins 
+{
+	text-decoration: none;
+}
+del 
+{
+	text-decoration: line-through;
+}
+
+table 
+{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* Responsive design */
+/* Desktop version */
+.container
+{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.row
+{
+	width:100%;
+	max-width: 1250px;
+	min-width: 755px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.onecol, .twocol
+{
+	margin-right: 3%;
+	float: left;
+	min-height: 1%;
+}
+
+.row .onecol
+{
+	width: 31%;
+}
+
+.row .twocol
+{
+	width: 62%;
+}
+
+.row .threecol
+{
+	width: 100%;
+	float: left;
+}
+
+.last 
+{
+	margin-right: 0px;
+}
+
+img, object, embed 
+{
+	max-width: 100%;
+}
+
+img 
+{
+	height: auto;
+}
+
+/* Tablet version */
+@media only screen and (max-width: 1000px) 
+{
+
+	#wrapper
+	{
+		font-size: 0.8em;
+		line-height: 1.5em;
+	}
+	
+}
+
+/* Mobile version */
+@media handheld, only screen and (max-width: 750px) 
+{
+
+	#wrapper
+	{
+		font-size: 16px;
+		-webkit-text-size-adjust: none;
+	}
+	
+	.row, #wrapper, .container 
+	{
+		width: 100%;
+		min-width: 0;
+		margin-left: 0px;
+		margin-right: 0px;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	
+	.row .onecol, .row .twocol, .row .threecol
+	{
+		width: auto;
+		float: none;
+		margin-left: 0px;
+		margin-right: 0px;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
+}
+
+/* Falling sprinkles */
+		.sprinkle {
+			position: absolute;
+			text-align: center;
+			z-index: 9999;
+			top: -100px;
+			width: 1em;
+			height: 1em;
+			color: white;
+			font-size: 32px;
+			text-shadow: rgba(0, 0, 0, 0.7) 1px 1px 2px;
+			/* We use the following properties to apply the fade and drop animations to each sprinkle.
+			   Each of these properties takes two values. These values respectively match a setting
+			   for fade and drop.
+			*/
+			-webkit-animation-iteration-count: infinite, infinite;
+			-webkit-animation-direction: normal, normal;
+			-webkit-animation-timing-function: linear, ease-in;
+		}
+
+		.sprinkle span {
+			position: absolute;
+			display: block;
+			width: 1em;
+			height: 1em;
+			/* We use the following properties to adjust the clockwiseSpin or counterclockwiseSpin
+			   animations on each sprinkle.
+			   The createASprinkle function determines whether a flake has the 
+			   clockwiseSpin or counterclockwiseSpin animation.
+			*/
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-direction: alternate;
+			-webkit-animation-timing-function: ease-in-out;
+			-webkit-transform-origin: 50% -100%;
+
+		}
+		.sprinkle.red
+		{
+			color:#FF0000;
+		}
+		.sprinkle.green
+		{
+			color:#00FF00;
+		}
+		.sprinkle.blue
+		{
+			color:#0000FF;
+		}
+		.sprinkle.orange
+		{
+			color:#FF9900;
+		}
+		.sprinkle.yellow
+		{
+			color:#FFFF00;
+		}
+		.sprinkle.pink
+		{
+			color:#FF33FF;
+		}
+		.sprinkle.purple
+		{
+			color:#AD33AD;
+		}
+		.sprinkle.sky
+		{
+			color:#33FFFF;
+		}
+		/* Hides a sprinkle towards the very end of the animation */
+		@-webkit-keyframes fade {
+			/* Show a sprinkle while into or below 85 percent of the animation and hide it, otherwise */
+			0%   { opacity: 1; }
+			90%  { opacity: 1; }
+			100% { opacity: 0; }
+		}
+
+		/* Makes a sprinkle fall from -50px to 800px pixels in the y-axis */
+		@-webkit-keyframes drop {
+			0%   { -webkit-transform: translate(0px, -50px); }
+			100% { -webkit-transform: translate(0px, 900px); }
+		}
+
+		/* Rotates a sprinkle from -50 to 50 degrees in 2D space */
+		@-webkit-keyframes clockwiseSpin {
+			0%   { -webkit-transform: rotate(-50deg); }
+			100% { -webkit-transform: rotate(50deg); }
+		}
+
+
+		/* Rotates it from 50 to -50 degrees in 2D space */
+		@-webkit-keyframes counterclockwiseSpin  {
+			0%   { -webkit-transform: rotate(50deg); }
+			100% { -webkit-transform: rotate(-50deg); }
+		}
+/* Full CSS code for all pages */
 body
 {
 	background:#000000;
+}
+header
+{
+	background: rgba(179,220,237,1);
+	background: -moz-linear-gradient(top, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 0%, rgba(188,224,238,1) 65%, rgba(255,255,255,1) 99%, rgba(255,255,255,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(179,220,237,1)), color-stop(0%, rgba(41,184,229,1)), color-stop(65%, rgba(188,224,238,1)), color-stop(99%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
+	background: -webkit-linear-gradient(top, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 0%, rgba(188,224,238,1) 65%, rgba(255,255,255,1) 99%, rgba(255,255,255,1) 100%);
+	background: -o-linear-gradient(top, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 0%, rgba(188,224,238,1) 65%, rgba(255,255,255,1) 99%, rgba(255,255,255,1) 100%);
+	background: -ms-linear-gradient(top, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 0%, rgba(188,224,238,1) 65%, rgba(255,255,255,1) 99%, rgba(255,255,255,1) 100%);
+	background: linear-gradient(to bottom, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 0%, rgba(188,224,238,1) 65%, rgba(255,255,255,1) 99%, rgba(255,255,255,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#ffffff', GradientType=0 );
+	height:200px;
+}
+header img
+{
+	margin-left:2%;
+}
+footer
+{
+	background: rgba(179,220,237,1);
+	background: -moz-linear-gradient(bottom, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 0%, rgba(188,224,238,1) 65%, rgba(255,255,255,1) 99%, rgba(255,255,255,1) 100%);
+	background: -webkit-gradient(left bottom, left bottom, color-stop(0%, rgba(179,220,237,1)), color-stop(0%, rgba(41,184,229,1)), color-stop(65%, rgba(188,224,238,1)), color-stop(99%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
+	background: -webkit-linear-gradient(bottom, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 0%, rgba(188,224,238,1) 65%, rgba(255,255,255,1) 99%, rgba(255,255,255,1) 100%);
+	background: -o-linear-gradient(bottom, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 0%, rgba(188,224,238,1) 65%, rgba(255,255,255,1) 99%, rgba(255,255,255,1) 100%);
+	background: -ms-linear-gradient(bottom, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 0%, rgba(188,224,238,1) 65%, rgba(255,255,255,1) 99%, rgba(255,255,255,1) 100%);
+	background: linear-gradient(to top, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 0%, rgba(188,224,238,1) 65%, rgba(255,255,255,1) 99%, rgba(255,255,255,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#ffffff', GradientType=0 );
+	height:200px;
 }
 /* Styling for ID's */
 #wrapper
 {
 	background:#ffffff;
-	width:80%;
+	width:99%;
+	margin:0 auto;
+}
+/* homepage wrapper */
+#wrapper1
+{
+	background:#ffffff;
+	width:99%;
 	margin:0 auto;
 	display:none;
+	position:absolute;
+	z-index:1;
+}
+#fireworks
+{
+	position:absolute;
+	z-index:0;
+	width:100%;
 }
 #menu ul li
 {
@@ -26,8 +318,7 @@ body
 }
 #menu ul li a:hover
 {
-	color:#0000FF;	
-}
+	color:#0000FF;
 }
 #content
 {
@@ -35,19 +326,51 @@ body
 	text-align:center;
 	padding:4% 0 18% 0;
 }
-#main
-{
-	width:65%;
-}
 #menu-right
 {
-	width:30%;
 	padding-bottom:7%;
 	background-color:#D7FADB;
 	border-radius:15%;
 }
-/* Styling for Classes */
-.left
+/* Styling for only products page */
+/* CSS for rolling-pin headers */
+.description 
 {
-	float:left;
+	display: none; 
+	width: 94%;  
+	margin-left: 3%; 
+	margin-bottom: 1.5%;
+	text-align: justify !important;
+}
+#products1 
+{
+	float: left; 
+	clear: right; 
+	width: 100%; 
+	margin-bottom: 3%; 
+	clear: right;
+}
+#products2 
+{
+	float: left; 
+	clear: right; 
+	width: 100%; 
+	margin-bottom: 3%; 
+	clear: left;
+}
+.product 
+{
+	cursor: pointer; 
+	cursor: hand; 
+	width: 30%; 
+	background-image: url("../img/pin2.jpg"); 
+	background-repeat: no-repeat; 
+	background-size: 100%; 
+	color: #ff0; 
+	font-size: 1.5em; 
+	padding: .5%; 
+	margin-right: 1%; 
+	padding-bottom:4%;
+	text-align: center; 
+	float: left;
 }
