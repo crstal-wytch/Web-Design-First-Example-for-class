@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Page</title>
+
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <img src="img/Sign.png" />
+        </header>
+        <div class="container">
+            <div class="row threecol last">
+                <nav id="menu">
+                    <!-- Coding for top menu -->
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="order.html">Order</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="content">
+            <div class="container">
+                <div class="row">
+                    <div id="times" class="onecol">
+                        <h1>Shop Delivery Times</h1>
+                        <hr />
+                    </div>
+                    <div id="orderForm" class="twocol last">
+                        <form action="post">
+                            <fieldset>
+                                <legend>Order Booking Form</legend>
+                                <p>
+                                    <label>Full Name: </label>
+                                    <input type="text" id="fullname" required placeholder="Please fill in your name here" />
+                                </p>
+                                <p>
+                                    <label>Delivery Address: </label>
+                                    <textarea rows="6" cols="40" id="home_address" required placeholder="Please fill in your address here"></textarea>
+                                </p>
+                                <p>
+                                    <label>Phone No: </label>
+                                    <input type="text" id="phoneNo" required placeholder="Please fill in your phone number here" />
+                                </p>
+                                <p>
+                                    <label>Email Address: </label>
+                                    <input type="email" id="email" required placeholder="Please fill in your email address here" />
+                                </p>
+                                <p>
+                                    <label>Type of Cake: </label>
+                                    <select required>
+                                        <option>-none-</option>
+                                        <option>Specialties</option>
+                                        <option>Cake</option>
+                                        <option>Cupcake</option>
+                                        <option>Cookies</option>
+                                        <option>Bread</option>
+                                        <option>Pies & Tarts</option>
+                                    </select>
+                                </p>
+                                <p>
+                                    <label>Order: </label>
+                                    <textarea rows="6" cols="40" id="orderType" required placeholder="Please fill in your order and any special requirements here"></textarea>
+                                </p>
+                                <p>
+                                    <label>Delivery Date: </label>
+                                    <input type="date" id="date" required />
+                                </p>
+                                <p>
+                                    <input type="submit" id="submit" value="Submit Booking Form" />
+                                </p>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer></footer>
+    </div>
+</body>
+</html>

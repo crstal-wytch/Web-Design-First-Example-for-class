@@ -1,81 +1,83 @@
 <!DOCTYPE html>
-	<html>
-		<head>
-			<title>Products Page</title>
+<html>
+<head>
+    <title>Products Page</title>
 
-			<link href="css/style.css" rel="stylesheet" type="text/css" />
-			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-			<script>
-				function productsShow(that) {
-					$('.description').hide();
-					$(that).toggle(2000);
-				}
-			</script>
-		</head>
-		<body>
-			<div id="wrapper">
-				<header>
-					<img src="img/Sign.png" />
-				</header>
-				<div class="container">
-					<div class="row threecol last">
-						<nav id="menu"> <!-- Coding for top menu -->
-							<ul>
-								<li><a href="home.html">Home</a></li>
-								<li><a href="products.html">Products</a></li>
-								<li><a href="about.html">About Us</a></li>
-								<li><a href="contact.html">Contact Us</a></li>
-							</ul>
-						</nav>
-					</div>
-				</div>	
-				<div id="content">
-					<div class="container">
-						<div class="row">
-							<div id="products1">
-								<div onclick="productsShow('#breads')" class="product onecol">Breads</div>
-								<div onclick="productsShow('#cookies')" class="product onecol">Cookies</div>
-								<div onclick="productsShow('#pies')" class="product onecol last">Tarts & Pies</div>
-							</div>
-							<div id ="descriptions1" class="threecol last">
-								<div id="breads" class="description">We have over 15 types of freshly baked breads.</div>
-								<div id="cookies" class="description">With over 120 recipies and make your own as well, we consider ourselves experts in baking.</div>
-								<div id="pies" class="description">Sweet and tangy or just sweet we have what you're looking for!</div>
-							</div>
-						</div>
-					</div>
-					<div class="container">
-						<div class="row">
-							<div id="products2">
-								<div onclick="productsShow('#cupcakes')" class="product onecol">Cupcakes</div>
-								<div onclick="productsShow('#cakes')" class="product onecol">Cakes</div>
-								<div onclick="productsShow('#specialities')" class="product onecol last">Specialities</div>
-							</div>
-							<div id="descriptions2" class="threecol last">
-								<div id="cupcakes" class="description">Can you resist?</div>
-								<div id="cakes" class="description">For birthdays, anniversaries and weddings! 
-									<br /> Quisque eros urna, efficitur et lorem id, rhoncus elementum lorem. Donec vel ipsum iaculis, dignissim nulla quis, accumsan felis. Mauris dignissim 
-									porttitor diam, porta condimentum ex bibendum eu. Sed molestie varius nisi, vel luctus ex condimentum ut. Quisque eros mauris, ornare sit amet orci at, 
-									vestibulum consectetur turpis. Sed maximus neque iaculis viverra aliquam. Morbi pretium purus tempus interdum auctor. Sed semper pretium pellentesque. 
-									Ut accumsan congue malesuada. Vestibulum quis enim turpis. Phasellus tempus, est eget viverra lobortis, purus urna porta massa, ut semper lacus dui id 
-									sapien. Donec sagittis et dui id ullamcorper. Ut efficitur nibh ac dapibus maximus. Sed faucibus dolor nisi, a tincidunt nunc tempus sed. In ornare in 
-									lectus ut interdum. Nunc posuere augue eu porta egestas.
-									In hac habitasse platea dictumst. Praesent quis semper metus. Aenean vel venenatis orci. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices 
-									posuere cubilia Curae; Morbi nec venenatis est. Mauris malesuada ullamcorper diam, sit amet aliquet sem molestie sit amet. Duis suscipit ex non nisi 
-									ultrices feugiat. Sed sit amet mattis ex, at laoreet lectus. Morbi purus nibh, suscipit et leo elementum, venenatis gravida nisi.
-									Vivamus vel commodo neque. Praesent venenatis est magna, ac hendrerit nisl viverra vel. Sed eu orci orci. Etiam nec leo quis massa dapibus ullamcorper. 
-									Suspendisse fermentum interdum est et vehicula. Duis tincidunt a felis rutrum imperdiet. Duis rutrum, nisl eget tristique viverra, magna nulla egestas 
-									sapien, in blandit nunc dui a libero. Donec non enim id metus consequat aliquet. Quisque vitae dignissim odio, ultricies tincidunt orci. In hac habitasse 
-									platea dictumst. Mauris vitae consequat orci. Pellentesque sit amet velit vel enim posuere blandit a sit amet odio. Morbi non neque tincidunt ligula 
-									ultrices egestas. Quisque ultrices justo at fermentum vulputate.</div>
-								<div id="specialities" class="description">Merry Christmas!</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<footer>
-				
-				</footer>
-			</div>
-		</body>
-	</html>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        function productsShow(that) {
+            $('.description').hide();
+            $(that).toggle(2000);
+        }
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <img src="img/Sign.png" />
+        </header>
+        <div class="container">
+            <div class="row threecol last">
+                <nav id="menu">
+                    <!-- Coding for top menu -->
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="order.html">Order</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="content">
+            <div class="container">
+                <div class="row">
+                    <div id="products1">
+                        <div onclick="productsShow('#breads')" class="product onecol">Breads</div>
+                        <div onclick="productsShow('#cookies')" class="product onecol">Cookies</div>
+                        <div onclick="productsShow('#pies')" class="product onecol last">Tarts & Pies</div>
+                    </div>
+                    <div id="descriptions1" class="threecol last">
+                        <div id="breads" class="description">We have over 15 types of freshly baked breads.</div>
+                        <div id="cookies" class="description">With over 120 recipies and make your own as well, we consider ourselves experts in baking.</div>
+                        <div id="pies" class="description">Sweet and tangy or just sweet we have what you're looking for!</div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div id="products2">
+                        <div onclick="productsShow('#cupcakes')" class="product onecol">Cupcakes</div>
+                        <div onclick="productsShow('#cakes')" class="product onecol">Cakes</div>
+                        <div onclick="productsShow('#specialities')" class="product onecol last">Specialities</div>
+                    </div>
+                    <div id="descriptions2" class="threecol last">
+                        <div id="cupcakes" class="description">Can you resist?</div>
+                        <div id="cakes" class="description">
+                            For birthdays, anniversaries and weddings!
+                            <br /> Quisque eros urna, efficitur et lorem id, rhoncus elementum lorem. Donec vel ipsum iaculis, dignissim nulla quis, accumsan felis. Mauris dignissim
+                            porttitor diam, porta condimentum ex bibendum eu. Sed molestie varius nisi, vel luctus ex condimentum ut. Quisque eros mauris, ornare sit amet orci at,
+                            vestibulum consectetur turpis. Sed maximus neque iaculis viverra aliquam. Morbi pretium purus tempus interdum auctor. Sed semper pretium pellentesque.
+                            Ut accumsan congue malesuada. Vestibulum quis enim turpis. Phasellus tempus, est eget viverra lobortis, purus urna porta massa, ut semper lacus dui id
+                            sapien. Donec sagittis et dui id ullamcorper. Ut efficitur nibh ac dapibus maximus. Sed faucibus dolor nisi, a tincidunt nunc tempus sed. In ornare in
+                            lectus ut interdum. Nunc posuere augue eu porta egestas.
+                            In hac habitasse platea dictumst. Praesent quis semper metus. Aenean vel venenatis orci. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+                            posuere cubilia Curae; Morbi nec venenatis est. Mauris malesuada ullamcorper diam, sit amet aliquet sem molestie sit amet. Duis suscipit ex non nisi
+                            ultrices feugiat. Sed sit amet mattis ex, at laoreet lectus. Morbi purus nibh, suscipit et leo elementum, venenatis gravida nisi.
+                            Vivamus vel commodo neque. Praesent venenatis est magna, ac hendrerit nisl viverra vel. Sed eu orci orci. Etiam nec leo quis massa dapibus ullamcorper.
+                            Suspendisse fermentum interdum est et vehicula. Duis tincidunt a felis rutrum imperdiet. Duis rutrum, nisl eget tristique viverra, magna nulla egestas
+                            sapien, in blandit nunc dui a libero. Donec non enim id metus consequat aliquet. Quisque vitae dignissim odio, ultricies tincidunt orci. In hac habitasse
+                            platea dictumst. Mauris vitae consequat orci. Pellentesque sit amet velit vel enim posuere blandit a sit amet odio. Morbi non neque tincidunt ligula
+                            ultrices egestas. Quisque ultrices justo at fermentum vulputate.
+                        </div>
+                        <div id="specialities" class="description">Merry Christmas!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer></footer>
+    </div>
+</body>
+</html>
